@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package fibbonacci;
 
 /**
@@ -15,7 +11,16 @@ public class Fibbonacci {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Objetivo: encontrar el primer termino de la secuencia de fibonnaci
+        // que contenga 1000 dígitos
+        
+        ArregloFib secuencia = new ArregloFib();
+        
+        while(!secuencia.comprobar(100)){
+            secuencia.agregar();
+        }
+        
+        System.out.println("La primera posición que tiene 1000 dígitos es: \n" + secuencia.getLength() + ") " + secuencia.getUltimaPosicion());
     }
     
 }
