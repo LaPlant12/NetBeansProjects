@@ -14,13 +14,13 @@ public class Fibbonacci {
         // Objetivo: encontrar el primer termino de la secuencia de fibonnaci
         // que contenga 1000 dígitos
         
-        ArregloFib secuencia = new ArregloFib();
+        ArregloFibBueno secuencia = new ArregloFibBueno();
         
-        while(!secuencia.comprobar(100)){
+        while(!secuencia.comprobar(10)){
             secuencia.agregar();
         }
         
-        System.out.println("La primera posición que tiene 1000 dígitos es: \n" + secuencia.getLength() + ") " + secuencia.getUltimaPosicion());
+        System.out.println(secuencia.getIndex() + ") " + secuencia.ultimoNum());
     }
     
 }
