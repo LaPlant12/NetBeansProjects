@@ -5,12 +5,14 @@
  */
 package fibbonacci;
 
+import java.math.BigInteger;
+
 /**
  *
  * @author laplant
  */
 public class ArregloFibBueno {
-    private int [] fib;
+    private BigInteger [] fib;
     private int index;
     private int forma;
     private int newforma;
@@ -20,18 +22,18 @@ public class ArregloFibBueno {
         forma = 0;
         newforma = 2;
         
-        fib = new int[2];
-        fib[0] = 1;
-        fib[1] = 2;
+        fib = new BigInteger[2];
+        fib[0] = new BigInteger("1");
+        fib[1] = new BigInteger("2");
     }
     
     public void agregar(){
         if(forma == 0){
-            fib[0] = fib[0] + fib[1];
+            fib[0] = fib[0].add(fib[1]);
             newforma = 1;
         }
         if(forma == 1){
-            fib[1] = fib[0] + fib[1];
+            fib[1] = fib[0].add(fib[1]);
             newforma = 0;
         }
         
@@ -39,7 +41,7 @@ public class ArregloFibBueno {
         index++;
     }
     
-    public int ultimoNum(){
+    public BigInteger ultimoNum(){
         if(index % 2 == 0)
             return fib[0];
         else

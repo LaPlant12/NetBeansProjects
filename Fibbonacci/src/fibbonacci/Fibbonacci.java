@@ -16,7 +16,7 @@ public class Fibbonacci {
         
         ArregloFibBueno secuencia = new ArregloFibBueno();
         
-        while(!secuencia.comprobar(10)){
+        while(!secuencia.comprobar(1000)){
             secuencia.agregar();
         }
         
